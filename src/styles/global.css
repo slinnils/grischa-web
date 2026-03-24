@@ -49,11 +49,6 @@ body {
   box-shadow: 0 0 15px var(--color-gw-shadow);
 }
 
-@media (min-width: 769px) {
-  .btn-primary {
-  }
-}
-
 .btn-primary:hover {
   background-color: var(--color-gw-accent-muted);
   border: 1px solid var(--color-gw-accent);
@@ -84,154 +79,158 @@ body {
   border-radius: 20px;
 }
 
-/*Carousel:*/
-@media (max-width: 769px) {
-  .carousel {
-    margin: 0 auto;
-  }
-}
-
-.carousel {
-  width: 90%;
-  height: 100%;
+/* ---- Carousel ---- */
+.carousel-wrapper {
   display: flex;
-  gap: 10vw;
-  padding: 2rem;
-  margin-bottom: 5rem;
-  margin-top: 3rem;
-  box-sizing: border-box;
-  scrollbar-width: none;
-
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  anchor-name: --my-carousel;
-
-  scroll-marker-group: after;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem auto 1rem;
+  max-width: 600px;
+  width: 90%;
 }
 
-@media (min-width: 769px) {
-  .carousel {
-    width: 500px;
+@media(min-width: 769px){
+  .carousel-wrapper{
+    margin: 3rem 0 1rem;
   }
 }
 
-.carousel::scroll-marker-group {
-  position: absolute;
-  position-anchor: --my-carousel;
-  top: calc(anchor(bottom) - 20px);
-  justify-self: anchor-center;
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
+.carousel-viewport img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  color: var(--color-gw-accent);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.carousel-btn:hover {
+  opacity: 0.7;
+}
+
+.carousel-dots {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
 }
 
-.carousel li::scroll-marker {
-  content: attr(data-accName);
+.dot {
   width: 8px;
   height: 8px;
-  background-color: transparent;
+  border-radius: 25%;
   border: 1px solid var(--color-gw-accent);
-  border-radius: 50%;
-  overflow: hidden;
-  text-indent: 16px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s;
 }
 
-.carousel li::scroll-marker:target-current {
+.dot.active {
   background-color: var(--color-gw-accent);
 }
 
-.carousel::scroll-button(*) {
-  border: 0;
-  font-size: 2rem;
-  background: none;
-  color: black;
-  opacity: 0.7;
-  cursor: pointer;
-
-  position: absolute;
-  position-anchor: --my-carousel;
-}
-
-.carousel::scroll-button(*):hover,
-.carousel::scroll-button(*):focus {
-  opacity: 1;
-}
-
-.carousel::scroll-button(*):active {
-  translate: 1px 1px;
-}
-
-.carousel::scroll-button(*):disabled {
-  opacity: 0.2;
-  cursor: unset;
-}
-
-.carousel::scroll-button(left) {
-  content: "❮" / "Previous";
-  right: calc(anchor(left) - 20px);
-  bottom: calc(anchor(top) - 37%);
-  color: var(--color-gw-accent);
-}
-
-.carousel::scroll-button(right) {
-  content: "❯" / "Next";
-  left: calc(anchor(right) - 20px);
-  bottom: calc(anchor(top) - 37%);
-  color: var(--color-gw-accent);
-}
-
-.carousel li {
-  min-width: 100%;
-  list-style-type: none;
-
-  flex: 0 0 100%;
-
-  display: flex;
-  justify-content: center;
-
-  scroll-snap-align: center;
-}
-
-img {
-  height: 100%;
-  object-fit: cover;
-}
-
+/* ---- Modal ---- */
 dialog {
   border: none;
   padding: 0;
   background: transparent;
 }
 
-.close-btn {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 0.5rem;
-  margin-left: auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 1px solid var(--color-gw-accent);
-  border-radius: 50%;
-
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--color-gw-accent);
-  cursor: pointer;
+dialog::backdrop {
+  background: rgba(0, 39, 39, 0.329);
+  backdrop-filter: blur(2px);
 }
 
 .projects-modal {
   position: fixed;
   margin: auto;
+  max-width: 95vw;
 }
 
-@media (min-width: 769px) {
-  .projects-modal {
-    max-width: 700px;
+.projects-modal[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-btn {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  color: var(--color-gw-accent);
+  cursor: pointer;
+  align-self: flex-end;
+}
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-btn {
+  background: none;
+  border: none;
+  color: var(--color-gw-accent);
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.modal-content img {
+  max-width: 700px;
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  max-width: min(700px, 80vw);
+}
+
+@media (max-width: 769px) {
+  .modal-content {
+    position: relative;
+  }
+
+  .modal-content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    margin: 0 auto;
+  }
+
+  .modal-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+  }
+
+  .modal-btn:first-child {
+    left: 0.5rem;
+  }
+
+  .modal-btn:last-child {
+    right: 0.5rem;
   }
 }
-
-/*Carousel*/
