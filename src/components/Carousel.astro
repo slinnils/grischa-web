@@ -1,0 +1,158 @@
+---
+import homepageDt from "../assets/piz-patty/piz-desktop-view.png";
+import mainFnDt from "../assets/piz-patty/piz-main-features.png";
+import menu from "../assets/piz-patty/piz-desktop-menu.png";
+import { imageConfig } from "astro:assets";
+---
+
+<ul>
+  <li>
+    <img
+      class="img-1"
+      src={homepageDt.src}
+      alt="Desktop Ansicht von Piz Patty"
+    />
+  </li>
+  <li>
+    <img
+      class="img-2"
+      src={mainFnDt.src}
+      alt="Screenshot von den haupt Funktionen der Startseite"
+    />
+  </li>
+  <li><img class="img-3" src={menu.src} alt="Menü Seite" /></li>
+</ul>
+
+<div class="carousel">
+  <button id="close">X</button>
+  <img id="modal-img" src={menu.src} alt="" />
+</div>
+
+<script>
+  function setModalImg(e) {
+    let imgLink;
+    imgLink = e.target.src;
+    document.querySelector("#modal-img")?.setAttribute("src", imgLink);
+  }
+  document.querySelectorAll("li img").forEach((img) => {
+    img.addEventListener("click", (e) => setModalImg(e));
+  });
+</script>
+
+<style>
+  @media (max-width: 769px) {
+    ul {
+      margin: 0 auto;
+    }
+  }
+
+  ul {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    gap: 10vw;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    box-sizing: border-box;
+    scrollbar-width: none;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    anchor-name: --my-carousel;
+
+    scroll-marker-group: after;
+  }
+
+  @media (min-width: 769px) {
+    ul {
+      width: 500px;
+    }
+  }
+
+  ul::scroll-marker-group {
+    position: absolute;
+    position-anchor: --my-carousel;
+    top: calc(anchor(bottom) - 20px);
+    justify-self: anchor-center;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  li::scroll-marker {
+    content: attr(data-accName);
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 1px solid var(--color-gw-accent);
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: 16px;
+  }
+
+  li::scroll-marker:target-current {
+    background-color: var(--color-gw-accent);
+  }
+
+  ul::scroll-button(*) {
+    border: 0;
+    font-size: 2rem;
+    background: none;
+    color: black;
+    opacity: 0.7;
+    cursor: pointer;
+
+    position: absolute;
+    position-anchor: --my-carousel;
+  }
+
+  ul::scroll-button(*):hover,
+  ul::scroll-button(*):focus {
+    opacity: 1;
+  }
+
+  ul::scroll-button(*):active {
+    translate: 1px 1px;
+  }
+
+  ul::scroll-button(*):disabled {
+    opacity: 0.2;
+    cursor: unset;
+  }
+
+  ul::scroll-button(left) {
+    content: "❮" / "Previous";
+    right: calc(anchor(left) - 20px);
+    bottom: calc(anchor(top) - 37%);
+    color: var(--color-gw-accent);
+  }
+
+  ul::scroll-button(right) {
+    content: "❯" / "Next";
+    left: calc(anchor(right) - 20px);
+    bottom: calc(anchor(top) - 37%);
+    color: var(--color-gw-accent);
+  }
+
+  li {
+    min-width: 100%;
+    list-style-type: none;
+
+    flex: 0 0 100%;
+
+    display: flex;
+    justify-content: center;
+
+    scroll-snap-align: center;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel {
+  }
+</style>

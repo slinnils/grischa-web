@@ -83,3 +83,155 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 20px;
 }
+
+/*Carousel:*/
+@media (max-width: 769px) {
+  .carousel {
+    margin: 0 auto;
+  }
+}
+
+.carousel {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  gap: 10vw;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  box-sizing: border-box;
+  scrollbar-width: none;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  anchor-name: --my-carousel;
+
+  scroll-marker-group: after;
+}
+
+@media (min-width: 769px) {
+  .carousel {
+    width: 500px;
+  }
+}
+
+.carousel::scroll-marker-group {
+  position: absolute;
+  position-anchor: --my-carousel;
+  top: calc(anchor(bottom) - 20px);
+  justify-self: anchor-center;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel li::scroll-marker {
+  content: attr(data-accName);
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border: 1px solid var(--color-gw-accent);
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: 16px;
+}
+
+.carousel li::scroll-marker:target-current {
+  background-color: var(--color-gw-accent);
+}
+
+.carousel::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+.carousel::scroll-button(*):hover,
+.carousel::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.carousel::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.carousel::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+.carousel::scroll-button(left) {
+  content: "❮" / "Previous";
+  right: calc(anchor(left) - 20px);
+  bottom: calc(anchor(top) - 37%);
+  color: var(--color-gw-accent);
+}
+
+.carousel::scroll-button(right) {
+  content: "❯" / "Next";
+  left: calc(anchor(right) - 20px);
+  bottom: calc(anchor(top) - 37%);
+  color: var(--color-gw-accent);
+}
+
+.carousel li {
+  min-width: 100%;
+  list-style-type: none;
+
+  flex: 0 0 100%;
+
+  display: flex;
+  justify-content: center;
+
+  scroll-snap-align: center;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+}
+
+dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.close-btn {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--color-gw-accent);
+  border-radius: 50%;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-gw-accent);
+  cursor: pointer;
+}
+
+.projects-modal {
+  position: fixed;
+  margin: auto;
+}
+
+@media (min-width: 769px) {
+  .projects-modal {
+    max-width: 700px;
+  }
+}
+
+/*Carousel*/
