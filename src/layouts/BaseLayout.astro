@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+
+const { title = "Grischa Web – Webdesign aus Graubünden" } = Astro.props;
+---
+
+<html lang="de-CH">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Professionelles Webdesign für KMU und Selbständige in Graubünden. Moderne, schnelle und suchmaschinenoptimierte Websites."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?&family=Changa+One:ital@0;1&family=Nova+Square&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <Header />
+  <body>
+    <slot />
+  </body>
+
+  <style>
+    body {
+      padding: 0 1.25rem;
+    }
+
+    @media (min-width: 800px) {
+      body {
+        padding: 0 2.5rem;
+      }
+    }
+  </style>
+
+
+</html>

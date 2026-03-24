@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import "../styles/global.css";
+import Projects from "../components/Projects.astro";
+---
+
+<!-- Hero -->
+<BaseLayout>
+  <Hero />
+  <div class="page-container">
+    <Projects />
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 80vh; /* gleiche Höhe wie dein Hero */
+    background-color: var(--color-gw-bg);
+  }
+</style>

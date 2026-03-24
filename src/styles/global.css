@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gw-bg: #0f1419;
+  --color-gw-bg-card: #1a1f27;
+  --color-gw-bg-elevated: #232a34;
+  --color-gw-accent: #38bdf8;
+  --color-gw-accent-muted: #38bdf840;
+  --color-gw-text: #e2e8f0;
+  --color-gw-text-mute: #94a3b8;
+  --color-gw-text-bright: #f8fafc;
+  --color-gw-border: #2a3441;
+  --color-gw-shadow: #54cafc93;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Changa One", sans-serif;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 6.3vw, 2.5rem);
+  color: var(--color-gw-accent);
+}
+
+p,
+a {
+  font-family: "Nova Square", sans-serif;
+}
+
+p {
+  color: var(--color-gw-text);
+}
+
+body {
+  background-color: var(--color-gw-bg);
+}
+
+.btn-primary {
+  color: var(--color-gw-text-bright);
+  background-color: var(--color-gw-accent);
+  box-shadow: 0 0 15px var(--color-gw-shadow);
+}
+
+@media (min-width: 769px) {
+  .btn-primary {
+  }
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gw-accent-muted);
+  border: 1px solid var(--color-gw-accent);
+  box-shadow: 0 0 30px var(--color-gw-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary {
+  color: var(--color-gw-text-mute);
+  background-color: var(--color-gw-accent-muted);
+  border: 1px solid var(--color-gw-accent);
+  box-shadow: 0 0 15px var(--color-gw-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  color: var(--color-gw-text-bright);
+  background-color: var(--color-gw-accent);
+  box-shadow: 0 0 30px var(--color-gw-shadow);
+}
+
+.btn-primary,
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
