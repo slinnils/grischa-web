@@ -24,7 +24,7 @@ export default function Carousel({ images }) {
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [modalIsOpen, currentIndex]);
+  }, [modalIsOpen]);
 
   function prev() {
     setCurrentIndex((i) => (i > 0 ? i - 1 : images.length - 1));
@@ -68,7 +68,7 @@ export default function Carousel({ images }) {
         className="projects-modal"
         ref={dialog}
         onClick={(e) => {
-          if (e.target === dialog.current) setModalIsOpen(false);
+          if (e.target.nodeName === "DIALOG") setModalIsOpen(false);
         }}
       >
         <button className="close-btn" onClick={() => setModalIsOpen(false)}>

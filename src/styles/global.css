@@ -85,7 +85,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin: 3rem auto 1rem;
+  margin: 0.5rem auto 0.8rem auto;
   max-width: 600px;
   width: 90%;
 }

@@ -21,8 +21,9 @@ const { title = "Grischa Web – Webdesign aus Graubünden" } = Astro.props;
     />
     <title>{title}</title>
   </head>
-  <Header />
+
   <body>
+    <Header />
     <slot />
   </body>
 
@@ -37,6 +38,4 @@ const { title = "Grischa Web – Webdesign aus Graubünden" } = Astro.props;
       }
     }
   </style>
-
-
 </html>
