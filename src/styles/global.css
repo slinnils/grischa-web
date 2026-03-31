@@ -21,22 +21,53 @@
 
 h1,
 h2,
-h3 {
+h3,
+.hero-span {
   font-family: "Changa One", sans-serif;
 }
 
-h2 {
+.section-title,
+.hero-span {
   font-size: clamp(1.2rem, 6.3vw, 2.5rem);
   color: var(--color-gw-accent);
 }
 
 p,
-a {
+a,
+span {
   font-family: "Nova Square", sans-serif;
 }
 
 p {
   color: var(--color-gw-text);
+}
+
+.card {
+  margin: 0 2rem 0 auto;
+  padding: 1rem 0.8rem;
+  width: 100%;
+  border-radius: 15px;
+
+  background-color: var(--color-gw-bg-elevated);
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media(min-width: 769px){
+  .card{
+    padding: 1.5rem 2rem;
+  }
+}
+
+.card-title {
+  font-size: clamp(1rem, 6.3vw, 1.5rem);
+  color: var(--color-gw-text-bright);
+  border-bottom: 2px dotted var(--color-gw-accent-muted);
+}
+
+.card-text{
+  color: var(--color-gw-text-mute);
 }
 
 body {
@@ -90,8 +121,8 @@ body {
   width: 100%;
 }
 
-@media(min-width: 769px){
-  .carousel-wrapper{
+@media (min-width: 769px) {
+  .carousel-wrapper {
     margin: 3rem 0 1rem;
   }
 }

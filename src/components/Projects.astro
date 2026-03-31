@@ -4,22 +4,20 @@ import { projects } from "../data/projects.js";
 ---
 
 <section id="projects">
-  <h2>Mein Projekt</h2>
+  <h1 class="section-title">Mein Projekt</h1>
 
   {
     projects.map((project) => (
-      <div class="project-wrapper">
+      <div class="project-wrapper card">
         <div class="group">
-          <h3>
+          <h3 class="card-title">
             <a href={`/${project.slug}`}>{project.title}</a>
           </h3>
 
           <Carousel images={project.images} client:visible />
         </div>
         <div class="text">
-          <p class="description">
-            {project.description}
-          </p>
+          <p class="description">{project.description}</p>
           <a class="project-link" href={`/${project.slug}`}>
             zu den Projekt Details
           </a>
@@ -39,18 +37,6 @@ import { projects } from "../data/projects.js";
     align-items: center;
   }
 
-  .project-wrapper {
-    margin: 2rem auto;
-    padding: 1rem 0.8rem;
-    width: 100%;
-    border-radius: 15px;
-
-    background-color: var(--color-gw-bg-elevated);
-
-    display: flex;
-    flex-direction: column;
-  }
-
   @media (min-width: 769px) {
     .project-wrapper {
       margin: 2rem 0;
@@ -62,12 +48,8 @@ import { projects } from "../data/projects.js";
     }
   }
 
-  h3 {
-    font-size: 1.5rem;
-    color: var(--color-gw-text-bright);
-  }
-
-  .description, .project-link{
+  .description,
+  .project-link {
     font-size: clamp(0.8rem, 4vw, 1.2rem);
   }
 

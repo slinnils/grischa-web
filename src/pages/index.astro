@@ -3,11 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import "../styles/global.css";
 import Projects from "../components/Projects.astro";
+import Services from "../components/Services.astro";
 ---
+
 <BaseLayout>
   <Hero />
   <div class="page-container">
     <Projects />
+    <hr />
+    <Services />
+    <hr />
   </div>
 </BaseLayout>
 
@@ -17,5 +22,16 @@ import Projects from "../components/Projects.astro";
     z-index: 1;
     margin-top: 80vh;
     background-color: var(--color-gw-bg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  hr {
+	margin: 0 auto;
+	width: 90%;
+    color: var(--color-gw-accent);
+    box-shadow: 0 0 50px 1px var(--color-gw-accent);
   }
 </style>

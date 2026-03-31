@@ -1,0 +1,110 @@
+---
+---
+
+<section>
+  <h1 class="section-title">Meine Services</h1>
+  <div class="card-section">
+    <div class="card websites">
+      <h2 class="card-title">Moderne Websites</h2>
+      <p class="card-text">
+        Ich baue moderne Websites, die auf allen Geräten einwandfrei
+        funktionieren - ob Handy, Tablet oder Desktop.
+      </p>
+    </div>
+
+    <div class="card seo">
+      <h2 class="card-title">SEO</h2>
+      <p class="card-text">
+        Ich achte auf eine gute Suchmaschinenoptimierung (SEO), damit
+        potenzielle Kunden Ihren Betrieb schnell und einfach über Google finden.
+      </p>
+    </div>
+
+    <div class="card cms">
+      <h2 class="card-title">CMS</h2>
+      <p class="card-text">
+        Mir ist wichtig, dass Sie Ihre Website selbst pflegen können. Über ein
+        Content Management System (CMS) können Sie Öffnungszeiten, Bilder, Texte
+        oder Blogposts jederzeit selbst anpassen - ohne technische
+        Vorkenntnisse.
+      </p>
+    </div>
+
+    <div class="card support">
+      <h2 class="card-title">Wartung und Support</h2>
+      <p class="card-text">
+        Falls gewünscht, kann ich auch die Pflege der Inhalte Ihrer Website
+        übernehmen.
+      </p>
+    </div>
+
+    <div class="card maps">
+      <h2 class="card-title">Google Maps und Kontakt-Integration</h2>
+      <p class="card-text">
+        Ihre Kunden finden Sie auf Anhieb — mit einer eingebetteten Google Maps
+        Karte und einem Kontaktformular direkt auf Ihrer Website. So können
+        Besucher mit einem Klick zu Ihnen navigieren oder eine Anfrage senden.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+    .card-section{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+  @media (min-width: 769px) {
+    .card-section {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, auto);
+      grid-template-areas:
+        "websites seo cms"
+        "support maps cms";
+    }
+  }
+
+  @media(max-width: 1000px){
+    .card-section{
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: 
+        "websites seo"
+        "support maps"
+        "cms cms";
+    }
+  }
+
+  span {
+    margin-top: 1rem;
+    color: var(--color-gw-text-mute);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .websites {
+    grid-area: websites;
+  }
+
+  .seo {
+    grid-area: seo;
+  }
+
+  .cms {
+    grid-area: cms;
+  }
+
+  .support {
+    grid-area: support;
+  }
+
+  .maps {
+    grid-area: maps;
+  }
+</style>
