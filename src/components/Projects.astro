@@ -11,13 +11,13 @@ import { projects } from "../data/projects.js";
       <div class="project-wrapper">
         <div class="group">
           <h3>
-            <a href="/piz-patty">{project.title}</a>
+            <a href={`/${project.slug}`}>{project.title}</a>
           </h3>
 
           <Carousel images={project.images} client:visible />
         </div>
         <div class="text">
-          <p>
+          <p class="description">
             {project.description}
           </p>
           <a class="project-link" href={`/${project.slug}`}>
@@ -33,7 +33,6 @@ import { projects } from "../data/projects.js";
   section {
     max-width: 100%;
   }
-
   .group {
     display: flex;
     flex-direction: column;
@@ -42,7 +41,11 @@ import { projects } from "../data/projects.js";
 
   .project-wrapper {
     margin: 2rem auto;
+    padding: 1rem 0.8rem;
     width: 100%;
+    border-radius: 15px;
+
+    background-color: var(--color-gw-bg-elevated);
 
     display: flex;
     flex-direction: column;
@@ -62,6 +65,10 @@ import { projects } from "../data/projects.js";
   h3 {
     font-size: 1.5rem;
     color: var(--color-gw-text-bright);
+  }
+
+  .description, .project-link{
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
   }
 
   .project-link {

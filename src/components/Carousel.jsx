@@ -43,8 +43,8 @@ export default function Carousel({ images }) {
 
         <div className="carousel-viewport">
           <img
-            src={images[currentIndex].src}
-            alt=""
+            src={images[currentIndex].src.src}
+            alt={images[currentIndex].alt}
             onClick={() => setModalIsOpen(true)}
           />
         </div>
@@ -78,7 +78,7 @@ export default function Carousel({ images }) {
           <button className="modal-btn" onClick={prev}>
             ❮
           </button>
-          <img src={images[currentIndex].src} alt="" />
+          <img src={images[currentIndex].src.src} alt={images[currentIndex].alt} />
           <button className="modal-btn" onClick={next}>
             ❯
           </button>

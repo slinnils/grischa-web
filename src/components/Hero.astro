@@ -2,12 +2,12 @@
 
 ---
 
-<section>
+<section id="hero-wrapper">
   <p>Webentwicklung aus Graubünden</p>
-  <h2>
-    Ihre Website.<br /><span class="text-gw-accent">Professionell.</span> Modern.
+  <h1>
+    Ihre Website.<br />Professionell.<span class="text-gw-accent"> Modern.</span>
     Schnell.
-  </h2>
+  </h1>
   <p>
     Ich helfe kleinen und mittelgrossen Betrieben zu einem überzeugenden
     Internetauftritt, damit Ihre Online-Präsenz Ihre Arbeit widerspiegelt.
@@ -17,6 +17,15 @@
     <a href="#contact" class="btn-secondary">Kontakt aufnehmen</a>
   </div>
 </section>
+
+<script>
+  const hero = document.querySelector("#hero-wrapper");
+  function updateParallax() {
+    hero.style.backgroundPositionY = `calc(50% + ${window.scrollY * 0.4}px)`;
+  }
+  updateParallax();
+  window.addEventListener("scroll", updateParallax);
+</script>
 
 <style>
   section {
@@ -31,6 +40,11 @@
     flex-direction: column;
     gap: 1.25rem;
     justify-content: end;
+  }
+
+  h1{
+    font-size: clamp(1rem, 6vw, 2.3rem);
+    color: var(--color-gw-text-bright);
   }
 
   p {
