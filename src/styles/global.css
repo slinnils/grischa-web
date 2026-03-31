@@ -32,6 +32,10 @@ h3,
   color: var(--color-gw-accent);
 }
 
+.section-title{
+  margin: 1.5rem 0 1.5rem 0;
+}
+
 p,
 a,
 span {
@@ -44,9 +48,11 @@ p {
 
 .card {
   margin: 0 2rem 0 auto;
-  padding: 1rem 0.8rem;
+  padding: 1.3rem 01rem;
   width: 100%;
   border-radius: 15px;
+
+  box-shadow: 8px 8px 15px inset #2222223a;
 
   background-color: var(--color-gw-bg-elevated);
 
@@ -63,6 +69,9 @@ p {
 .card-title {
   font-size: clamp(1rem, 6.3vw, 1.5rem);
   color: var(--color-gw-text-bright);
+}
+
+.card-title:not(.project-title){
   border-bottom: 2px dotted var(--color-gw-accent-muted);
 }
 

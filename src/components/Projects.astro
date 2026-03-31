@@ -10,7 +10,7 @@ import { projects } from "../data/projects.js";
     projects.map((project) => (
       <div class="project-wrapper card">
         <div class="group">
-          <h3 class="card-title">
+          <h3 class="card-title project-title">
             <a href={`/${project.slug}`}>{project.title}</a>
           </h3>
 
@@ -39,7 +39,6 @@ import { projects } from "../data/projects.js";
 
   @media (min-width: 769px) {
     .project-wrapper {
-      margin: 2rem 0;
       flex-direction: row;
       display: grid;
       grid-template-columns: minmax(400px, 688px) minmax(333px, 769px);
