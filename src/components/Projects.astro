@@ -1,6 +1,7 @@
 ---
 import Carousel from "../components/Carousel.jsx";
 import { projects } from "../data/projects.js";
+import mockup from "../assets/piz-patty-mockup.webp";
 ---
 
 <section id="projects">
@@ -13,14 +14,16 @@ import { projects } from "../data/projects.js";
           <h3 class="card-title project-title">
             <a href={`/${project.slug}`}>{project.title}</a>
           </h3>
-
-          <Carousel images={project.images} client:visible />
+          <img src={mockup.src} />
+          {/*<Carousel images={project.images} client:visible />*/}
         </div>
         <div class="text">
           <p class="description">{project.description}</p>
-          <a class="project-link" href={`/${project.slug}`}>
-            zu den Projekt Details
-          </a>
+          <div class="link-group">
+            <a class="project-link" href={`/${project.slug}`}>
+              zu den Projekt Details
+            </a>
+          </div>
         </div>
       </div>
     ))
@@ -37,19 +40,19 @@ import { projects } from "../data/projects.js";
     align-items: center;
   }
 
+
   @media (min-width: 769px) {
     .project-wrapper {
-      flex-direction: row;
       display: grid;
-      grid-template-columns: minmax(400px, 688px) minmax(333px, 769px);
-
+      grid-template-columns: minmax(400px, 688px) minmax(250px, 769px);
+      gap: 1.5rem;
       align-items: center;
     }
   }
 
   .description,
   .project-link {
-    font-size: clamp(0.8rem, 4vw, 1.2rem);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
   }
 
   .project-link {

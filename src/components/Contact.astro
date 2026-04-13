@@ -1,0 +1,120 @@
+---
+
+---
+
+<section id="contact">
+  <div class="form-container card">
+    <div>
+      <h2 class="section-title">Kontaktieren Sie mich!</h2>
+    </div>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input
+        type="hidden"
+        name="access_key"
+        value={import.meta.env.PUBLIC_WEB3FORMS_KEY}
+      />
+      <label class="title" for="name">Name</label>
+      <input type="text" name="name" required />
+
+      <label class="title" for="email">E-Mail Adresse</label>
+      <input type="email" name="email" required />
+
+      <label class="title" for="message">Deine Nachricht</label>
+      <textarea name="message" required></textarea>
+      <button class="btn-primary" type="submit">Senden</button>
+
+      <input type="checkbox" name="botcheck" style="display: none;" />
+    </form>
+  </div>
+
+  <div class="info">
+    <h3 class="section-title">Meine Kontaktangaben:</h3>
+    <p>Nils Imbach</p>
+    <a href="mailto:grischaweb@proton.me">grischaweb@proton.me</a>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    gap: 1.8rem;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    margin: auto;
+  }
+
+  @media (max-width: 769px) {
+    section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  a {
+    color: var(--color-gw-accent);
+  }
+
+  label {
+    color: var(--color-gw-text);
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(1rem, 10vw, 2rem);
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  input,
+  textarea {
+    margin: 0.5rem 0 1.6rem 0;
+    padding: 0.2rem 1rem;
+    width: 96%;
+    max-width: 600px;
+    font-size: 1.5rem;
+    color: var(--color-gw-text-bright);
+    background-color: var(--color-gw-bg-card);
+    border-radius: 15px;
+    border: 1px solid var(--color-gw-accent-muted);
+  }
+
+  input:not([type="hidden"]):not([name="botcheck"]):focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px var(--color-gw-shadow);
+  }
+
+  input,
+  textarea {
+    transition: box-shadow 0.3s;
+  }
+
+  p,
+  a {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
+  .info{
+    width: 100%;
+    text-align: center;
+  }
+</style>
