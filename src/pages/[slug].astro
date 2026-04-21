@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { projects } from "../data/projects";
-import Carousel from "../components/Carousel.jsx";
 import ProjectDetails from "../components/project-details/ProjectDetails.jsx"
 
 export function getStaticPaths() {
@@ -12,7 +11,7 @@ const { slug } = Astro.params;
 const project = projects.find((p) => p.slug === slug);
 ---
 
-<BaseLayout title="Piz Patty Projektseite">
+<BaseLayout title={`${project ? project.title : ""} - Projektseite`}>
   <section class="section-title card">
     <ProjectDetails project={project} desktop={project?.desktop} mobile={project?.mobile} client:visible />
   </section>
@@ -23,6 +22,7 @@ const project = projects.find((p) => p.slug === slug);
     margin: 120px auto 0 auto;
     gap: 2rem;
     max-width: 1373px;
+    min-width: 444px;
   }
 
   img {

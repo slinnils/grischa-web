@@ -1,44 +1,51 @@
 ---
-import Carousel from "../components/Carousel.jsx";
 import { projects } from "../data/projects.js";
-import mockup from "../assets/piz-patty-mockup.webp";
 ---
 
 <section id="projects">
   <h1 class="section-title">Mein erstes Projekt</h1>
 
-  {
-    projects.map((project) => (
-      <div class="project-wrapper card">
-        <div class="group">
-          <h3 class="card-title project-title">
-            <a href={`/${project.slug}`}>{project.title}</a>
-          </h3>
-          <img src={mockup.src} />
-        </div>
-        <div class="text">
-          <p class="description">{project.description}</p>
-          <div class="link-group">
-            <a class="project-link" href={`/${project.slug}`}>
-              zu den Projekt Details
-            </a>
+  <div class="projects-container">
+    {
+      projects.map((project) => (
+        <div class="project-wrapper card">
+          <div class="group">
+            <h3 class="card-title project-title">
+              <a href={`/${project.slug}`}>{project.title}</a>
+            </h3>
+            <img src={project.mockup.src} />
+          </div>
+          <div class="text">
+            <p class="description">{project.description}</p>
+            <div class="link-group">
+              <a class="project-link" href={`/${project.slug}`}>
+                zu den Projekt Details
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </section>
 
 <style>
   section {
     max-width: 100%;
   }
+
   .group {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  .projects-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    outline: red;
+  }
 
   @media (min-width: 769px) {
     .project-wrapper {

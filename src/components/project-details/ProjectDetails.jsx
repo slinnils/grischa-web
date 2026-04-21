@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Switch from "./MobileSwitch";
+import Accordion from "./Accordion.jsx"
 
 export default function ProjectDetails({ project, desktop, mobile }) {
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   function handleToggle() {
     setIsMobile((prev) => !prev);
@@ -25,14 +26,14 @@ export default function ProjectDetails({ project, desktop, mobile }) {
       </div>
       <div className="flex flex-col gap-10">
         {(isMobile ? mobile : desktop).images.map((img) => (
-          <div className="flex flex-col md:flex-row items-start gap-10">
+          <div key={img.alt} className="flex flex-col md:flex-row items-start gap-10">
             <div className={`relative w-[95%] ${!isMobile ? "md:max-w-190" : "md:max-w-110"} md:w-[50%] shrink-0`}>
-              <img className="rounded-xl w-full" src={img.src.src} />
+              <img className="rounded-xl w-full" src={img.src.src} alt={img.alt} />
               {img.highlights &&
                 img.highlights.map((h, i) => (
                   <div
                     key={i}
-                    className="absolute flex items-center gap-1"
+                    className={`absolute flex items-center gap-1 ${h.right ? "flex-row-reverse" : ""}`}
                     style={{ left: `${h.x}%`, top: `${h.y}%` }}
                   >
                     <span className="text-gw-accent text-2xl animate-pulse">
@@ -44,16 +45,7 @@ export default function ProjectDetails({ project, desktop, mobile }) {
                   </div>
                 ))}
             </div>
-            <ul className="flex flex-col justify-center gap-7 p-5 border rounded-2xl border-dotted">
-              {img.description.map((text, i) => (
-                <li
-                  className="text-[clamp(0.9rem,2vw,1.2rem)] text-gw-text"
-                  key={i}
-                >
-                  {text}
-                </li>
-              ))}
-            </ul>
+            <Accordion items={img.description} />
             <hr className="md:hidden" />
           </div>
         ))}
