@@ -5,7 +5,7 @@ import mockup from "../assets/piz-patty-mockup.webp";
 ---
 
 <section id="projects">
-  <h1 class="section-title">Mein Projekt</h1>
+  <h1 class="section-title">Mein erstes Projekt</h1>
 
   {
     projects.map((project) => (
@@ -15,7 +15,6 @@ import mockup from "../assets/piz-patty-mockup.webp";
             <a href={`/${project.slug}`}>{project.title}</a>
           </h3>
           <img src={mockup.src} />
-          {/*<Carousel images={project.images} client:visible />*/}
         </div>
         <div class="text">
           <p class="description">{project.description}</p>

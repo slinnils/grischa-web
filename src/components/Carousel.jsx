@@ -36,32 +36,34 @@ export default function Carousel({ images }) {
 
   return (
     <>
-      <div className="carousel-wrapper">
-        <button className="carousel-btn left" onClick={prev}>
-          ❮
-        </button>
+      <div>
+        <div className="carousel-wrapper">
+          <button className="carousel-btn left" onClick={prev}>
+            ❮
+          </button>
 
-        <div className="carousel-viewport">
-          <img
-            src={images[currentIndex].src.src}
-            alt={images[currentIndex].alt}
-            onClick={() => setModalIsOpen(true)}
-          />
+          <div className="carousel-viewport">
+            <img
+              src={images[currentIndex].src.src}
+              alt={images[currentIndex].alt}
+              onClick={() => setModalIsOpen(true)}
+            />
+          </div>
+
+          <button className="carousel-btn right" onClick={next}>
+            ❯
+          </button>
         </div>
 
-        <button className="carousel-btn right" onClick={next}>
-          ❯
-        </button>
-      </div>
-
-      <div className="carousel-dots">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            className={`dot ${i === currentIndex ? "active" : ""}`}
-            onClick={() => setCurrentIndex(i)}
-          />
-        ))}
+        <div className="carousel-dots">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              className={`dot ${i === currentIndex ? "active" : ""}`}
+              onClick={() => setCurrentIndex(i)}
+            />
+          ))}
+        </div>
       </div>
 
       <dialog
@@ -78,7 +80,10 @@ export default function Carousel({ images }) {
           <button className="modal-btn" onClick={prev}>
             ❮
           </button>
-          <img src={images[currentIndex].src.src} alt={images[currentIndex].alt} />
+          <img
+            src={images[currentIndex].src.src}
+            alt={images[currentIndex].alt}
+          />
           <button className="modal-btn" onClick={next}>
             ❯
           </button>

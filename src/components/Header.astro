@@ -1,18 +1,21 @@
 ---
-
+import logo from "../assets/grischa-web-logo.png";
 ---
 
 <header>
-  <h1>Grischa-Web</h1>
+  <div class="flex gap-5 mt-5">
+    <img class="w-22 h-22 rounded-full" src={logo.src} alt="" />
+    <a href="/"><h1>Grischa-Web</h1></a>
+  </div>
 </header>
 
 <style>
-  h1{
+  h1 {
     font-size: clamp(1.9rem, 10vw, 3.3rem);
     color: var(--color-gw-text-bright);
   }
 
-  header{
+  header {
     position: absolute;
     top: 0;
     z-index: 20;

@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { projects } from "../data/projects";
+import Carousel from "../components/Carousel.jsx";
+import ProjectDetails from "../components/project-details/ProjectDetails.jsx"
+
+export function getStaticPaths() {
+  return projects.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const project = projects.find((p) => p.slug === slug);
+---
+
+<BaseLayout title="Piz Patty Projektseite">
+  <section class="section-title card">
+    <ProjectDetails project={project} desktop={project?.desktop} mobile={project?.mobile} client:visible />
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 120px auto 0 auto;
+    gap: 2rem;
+    max-width: 1373px;
+  }
+
+  img {
+    width: 50%;
+    border-radius: 15px;
+  }
+
+  .img-descr {
+    display: flex;
+    gap: 2rem;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+  }
+</style>
