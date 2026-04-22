@@ -1,9 +1,10 @@
 import pizDesktop from "../assets/piz-patty/piz-desktop-1.png";
 import pizMobile from "../assets/piz-patty/piz-mobile-1.png";
+import pizMobile2 from "../assets/piz-patty/piz-mobile-2.png";
 import pizFeatures from "../assets/piz-patty/piz-desktop-2.png";
 import pizMenu from "../assets/piz-patty/piz-desktop-menu.png";
 
-import PizPattymockup from "../assets/piz-patty-mockup.webp"
+import PizPattymockup from "../assets/piz-patty-mockup.webp";
 
 export const projects = [
   {
@@ -14,7 +15,7 @@ export const projects = [
       "Eine Restaurant-Website mit Speisekarte, Reservierungsmöglichkeit und Google Maps Einbindung. Die Inhalte können vom Betreiber selbst gepflegt werden, ohne technische Vorkenntnisse.",
     tags: ["Astro", "Sanity CMS", "Responsive", "SEO"],
     liveUrl: "https://piz-patty.vercel.app",
-    mockup: PizPattymockup, 
+    mockup: PizPattymockup,
 
     desktop: {
       images: [
@@ -113,6 +114,20 @@ export const projects = [
             { x: 59, y: -1, label: "Hamburger Menü", right: true },
             { x: 35, y: 45, label: "CTA Buttons" },
             { x: 35, y: 61, label: "Öffnungszeiten" },
+          ],
+        },
+        {
+          src: pizMobile2,
+          alt: "Unterer Teil der Startseite",
+          description: [
+            {
+              title: "Google Maps und Food Order einbindung",
+              text: "Auch in der Mobilen ansicht sind die Einbindungen für Google Maps und die Bestellservices leicht zu finden.",
+            },
+          ],
+          highlights: [
+            { x: 35, y: 12, label: "Google Maps", right: true },
+            { x: 45, y: 65, label: "link zu Bestellservices" },
           ],
         },
       ],

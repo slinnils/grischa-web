@@ -3,7 +3,7 @@ import Switch from "./MobileSwitch";
 import Accordion from "./Accordion.jsx"
 
 export default function ProjectDetails({ project, desktop, mobile }) {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(!false);
 
   function handleToggle() {
     setIsMobile((prev) => !prev);
