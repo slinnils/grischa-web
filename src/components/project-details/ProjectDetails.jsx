@@ -27,7 +27,7 @@ export default function ProjectDetails({ project, desktop, mobile }) {
       <div className="flex flex-col gap-10">
         {(isMobile ? mobile : desktop).images.map((img) => (
           <div key={img.alt} className="flex flex-col md:flex-row items-start gap-10">
-            <div className={`relative w-[95%] ${!isMobile ? "md:max-w-190" : "md:max-w-110"} md:w-[50%] shrink-0`}>
+            <div className={`relative w-[full] ${!isMobile ? "md:max-w-190" : "md:max-w-110"} md:w-[50%] shrink-0`}>
               <img className="rounded-xl w-full" src={img.src.src} alt={img.alt} />
               {img.highlights &&
                 img.highlights.map((h, i) => (

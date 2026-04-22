@@ -4,10 +4,17 @@ import Navbar from "./Navbar.astro";
 ---
 
 <header class="flex items-center justify-between w-full max-w-530">
-  <div class="flex items-center gap-5">
-    <img id="logo-img" class="w-22 h-22 rounded-full" src={logo.src} alt="Logo der Website" />
-    <a href="/"><h1>Grischa-Web</h1></a>
-  </div>
+  <a href="/">
+    <div class="flex items-center gap-5">
+      <img
+        id="logo-img"
+        class="w-22 h-22 rounded-full"
+        src={logo.src}
+        alt="Logo der Website"
+      />
+      <h1>Grischa-Web</h1>
+    </div>
+  </a>
   <Navbar />
 </header>
 

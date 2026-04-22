@@ -11,7 +11,7 @@ export default function Accordion({ items }) {
           className="border-2 border-gw-accent-muted rounded-lg overflow-hidden"
         >
           <button
-            className="w-full text-left px-4 py-2 flex justify-between items-center bg-gw-bg-card text-gw-text hover:bg-gw-bg-elevated transition-colors"
+            className="w-full cursor-pointer text-left px-4 py-2 flex justify-between items-center bg-gw-bg-card text-gw-text hover:bg-gw-bg-elevated transition-colors"
             onClick={() => setOpenIndex(openIndex === i ? null : i)}
           >
             <span className="text-2xl text-gw-accent">{item.title}</span>

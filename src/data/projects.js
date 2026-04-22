@@ -41,7 +41,7 @@ export const projects = [
             },
           ],
           highlights: [
-            { x: 40, y: -7, label: "Navigationsleiste", right: true },
+            { x: 55, y: -6, label: "Navigationsleiste", right: true },
             { x: 45, y: 41.5, label: "CTA Buttons" },
             { x: 50, y: 10, label: "Hero Bild" },
             { x: 10, y: 53, label: "Öffnungszeiten" },
