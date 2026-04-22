@@ -27,7 +27,7 @@ label,
 
 .section-title,
 .hero-span {
-  font-size: clamp(1.2rem, 6.3vw, 2.5rem);
+  font-size: clamp(1.5rem, 8.3vw, 2.5rem);
   color: var(--color-gw-accent);
 }
 

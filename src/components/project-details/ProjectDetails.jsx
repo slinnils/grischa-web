@@ -3,7 +3,7 @@ import Switch from "./MobileSwitch";
 import Accordion from "./Accordion.jsx"
 
 export default function ProjectDetails({ project, desktop, mobile }) {
-  const [isMobile, setIsMobile] = useState(!false);
+  const [isMobile, setIsMobile] = useState(false);
 
   function handleToggle() {
     setIsMobile((prev) => !prev);
@@ -19,8 +19,8 @@ export default function ProjectDetails({ project, desktop, mobile }) {
         <Switch isMobile={isMobile} onSwitch={handleToggle} />
       </div>
       <div className="flex justify-between items-center">
-        <h1>{project.title}</h1>
-        <a className="text-2xl border-b" href={project.liveUrl}>
+        <h1 className="section-title">{project.title}</h1>
+        <a className="text-xl md:text-2xl border-b" href={project.liveUrl}>
           zur Website
         </a>
       </div>

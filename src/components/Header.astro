@@ -1,23 +1,55 @@
 ---
 import logo from "../assets/grischa-web-logo.png";
+import Navbar from "./Navbar.astro";
 ---
 
-<header>
-  <div class="flex gap-5 mt-5">
-    <img class="w-22 h-22 rounded-full" src={logo.src} alt="" />
+<header class="flex items-center justify-between w-full max-w-530">
+  <div class="flex items-center gap-5">
+    <img id="logo-img" class="w-22 h-22 rounded-full" src={logo.src} alt="Logo der Website" />
     <a href="/"><h1>Grischa-Web</h1></a>
   </div>
+  <Navbar />
 </header>
 
+<script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
 <style>
-  h1 {
-    font-size: clamp(1.9rem, 10vw, 3.3rem);
-    color: var(--color-gw-text-bright);
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 0 0 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
   }
 
-  header {
-    position: absolute;
-    top: 0;
-    z-index: 20;
+  header.scrolled {
+    height: auto;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    backdrop-filter: blur(4px);
+  }
+
+  header.scrolled #logo-img {
+    width: 65px;
+    height: 65px;
+    transition: all 0.3s ease;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    color: var(--color-gw-text-bright);
   }
 </style>
