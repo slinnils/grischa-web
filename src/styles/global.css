@@ -80,7 +80,6 @@ a {
 }
 
 .card-title:not(.project-title) {
-  border-bottom: 2px dotted var(--color-gw-accent-muted);
 }
 
 .card-text {
