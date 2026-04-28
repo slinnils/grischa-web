@@ -10,18 +10,32 @@ const { title = "Grischa Web - Webdesign aus Graubünden" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
     <meta
       name="description"
       content="Professionelles Webdesign für KMU und Selbständige in Graubünden. Moderne, schnelle und suchmaschinenoptimierte Websites."
     />
+
+    <link rel="icon" href="/favicon.png" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://grischa-web.ch/" />
+    <meta property="og:title" content="{title}" />
+    <meta
+      property="og:description"
+      content="Webentwicklung & Design aus Graubünden."
+    />
+    <meta property="og:image" content="https://grischa-web.ch/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:image" content="https://grischa-web.ch/og-image.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?&family=Changa+One:ital@0;1&family=Nova+Square&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="/favicon.png" />
-    <title>{title}</title>
   </head>
 
   <body>
@@ -35,8 +49,8 @@ const { title = "Grischa Web - Webdesign aus Graubünden" } = Astro.props;
       padding: 0 0.8rem;
     }
 
-    @media(min-width: 1746px){
-      body{
+    @media (min-width: 1746px) {
+      body {
         margin: 0 auto;
         max-width: 2200px;
       }
