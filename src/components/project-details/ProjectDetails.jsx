@@ -45,7 +45,7 @@ export default function ProjectDetails({ project, desktop, mobile }) {
                   </div>
                 ))}
             </div>
-            <Accordion items={img.description} />
+            <Accordion items={img} />
             <hr className="md:hidden" />
           </div>
         ))}

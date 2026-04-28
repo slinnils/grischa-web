@@ -5,7 +5,7 @@
 <section id="contact">
   <div class="form-container card">
     <div>
-      <h2 class="section-title">Kontaktieren Sie mich!</h2>
+      <h2 class="section-title">Lassen Sie uns Ihr Projekt besprechen</h2>
     </div>
     <form action="https://api.web3forms.com/submit" method="POST">
       <input
@@ -16,15 +16,15 @@
       <label class="title" for="name">Name</label>
       <input type="text" name="name" required />
 
-      <label class="title" for="email">E-Mail Adresse</label>
+      <label class="title" for="email">E-Mail-Adresse</label>
       <input type="email" name="email" required />
 
-      <label class="title" for="message">Deine Nachricht</label>
+      <label class="title" for="message">Ihre Nachricht</label>
       <textarea name="message" required></textarea>
       <button class="btn-primary" type="submit">Senden</button>
 
       
-      <span>Ich melde mich in der Regel innert 24 Stunden</span>
+      <span>Ich melde mich in der Regel innert 24 Stunden.</span>
 
       <input type="checkbox" name="botcheck" style="display: none;" />
     </form>
@@ -69,6 +69,7 @@
   label {
     color: var(--color-gw-text);
     font-size: clamp(1.5rem, 4vw, 1.8rem);
+    align-self: flex-start;
   }
 
   form {
@@ -91,7 +92,7 @@
   textarea {
     margin: 0.5rem 0 1.6rem 0;
     padding: 0.2rem 1rem;
-    width: 96%;
+    width: 100%;
     max-width: 600px;
     font-size: 1.5rem;
     color: var(--color-gw-text-bright);

@@ -5,28 +5,30 @@ export default function Accordion({ items }) {
 
   return (
     <div className="flex flex-col gap-2 w-full">
-      {items.map((item, i) => (
-        <div
-          key={i}
-          className="border-2 border-gw-accent-muted rounded-lg overflow-hidden"
-        >
-          <button
-            className="w-full cursor-pointer text-left px-4 py-2 flex justify-between items-center bg-gw-bg-card text-gw-text hover:bg-gw-bg-elevated transition-colors"
-            onClick={() => setOpenIndex(openIndex === i ? null : i)}
+      {items.description.map((item, i) => (
+        <>
+          <div
+            key={i}
+            className="border-2 border-gw-accent-muted rounded-lg overflow-hidden mt-5"
           >
-            <span className="text-2xl text-gw-accent">{item.title}</span>
-            <span
-              className={`text-xl text-gw-accent transition-transform ${openIndex === i ? "rotate-180" : ""}`}
+            <button
+              className="w-full cursor-pointer text-left px-4 py-4 flex justify-between items-center bg-gw-bg-card text-gw-text hover:bg-gw-bg-elevated transition-colors"
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
             >
-              ▼
-            </span>
-          </button>
-          {openIndex === i && (
-            <div className="text-lg  shadow-2xl p-4 text-gw-text-mute border-t-2 bg-gw-bg-card border-dotted border-gw-accent-muted">
-              {item.text}
-            </div>
-          )}
-        </div>
+              <span className="text-2xl text-gw-accent">{item.title}</span>
+              <span
+                className={`text-xl text-gw-accent transition-transform ${openIndex === i ? "rotate-180" : ""}`}
+              >
+                ▼
+              </span>
+            </button>
+            {openIndex === i && (
+              <div className="text-lg  shadow-2xl p-4 text-gw-text-mute border-t-2 bg-gw-bg-card border-dotted border-gw-accent-muted">
+                {item.text}
+              </div>
+            )}
+          </div>
+        </>
       ))}
     </div>
   );

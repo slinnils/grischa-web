@@ -3,7 +3,7 @@ import pizMobile from "../assets/piz-patty/piz-mobile-1.png";
 import pizMobile2 from "../assets/piz-patty/piz-mobile-2.png";
 import pizFeatures from "../assets/piz-patty/piz-desktop-2.png";
 import pizMenu from "../assets/piz-patty/piz-desktop-menu.png";
-import mobileMenu from "../assets/piz-patty/piz-mobile-menu.png"
+import mobileMenu from "../assets/piz-patty/piz-mobile-menu.png";
 import cms from "../assets/piz-cms.png";
 
 import PizPattymockup from "../assets/piz-patty-mockup.webp";
@@ -14,7 +14,7 @@ export const projects = [
     title: "Piz Patty",
     category: "Gastronomie",
     description:
-      "Eine Restaurant-Website mit Speisekarte, Reservierungsmöglichkeit und Google Maps Einbindung. Die Inhalte können vom Betreiber selbst gepflegt werden, ohne technische Vorkenntnisse.",
+      "Eine moderne Restaurant-Website mit Speisekarte, Reservierungsmöglichkeit und Google Maps-Integration. Das Besondere: Über eine einfache Verwaltungsoberfläche kann der Inhaber Texte und Preise jederzeit selbst anpassen - ganz ohne Hilfe und ohne eine Zeile Code zu schreiben.",
     tags: ["Astro", "Sanity CMS", "Responsive", "SEO"],
     liveUrl: "https://piz-patty.vercel.app",
     mockup: PizPattymockup,
@@ -27,19 +27,19 @@ export const projects = [
           description: [
             {
               title: "Navigationsleiste",
-              text: "Die Navigationsleiste ist von der ganzen Website aus erreichbar und sorgt für eine einfache Navigation zu allen Sektionen der Website.",
+              text: "Dank der stets präsenten Navigationsleiste finden sich Besucher jederzeit zurecht. Alle Bereiche der Seite sind so mit nur einem Klick erreichbar.",
             },
             {
-              title: "Hero Bild",
-              text: "Grosses Hero-Bild mit zwei CTA-Buttons.",
+              title: "Hero-Sektion",
+              text: "Ein emotionales, grossformatiges Titelbild, das sofort die Atmosphäre des Restaurants vermittelt und den Besucher willkommen heisst.",
             },
             {
-              title: "CTA Buttons",
-              text: 'CTA steht für "Call to action", also Aufruf zu einer Aktion. Die Buttons lenken Besucher direkt zum Menü und zum Kontaktformular.',
+              title: "Call-to-Action (CTA)",
+              text: "Strategisch platzierte Buttons leiten den Besucher gezielt zu den wichtigsten Bereichen: der Speisekarte und der Tischreservierung. Das erhöht die Conversion-Rate spürbar.",
             },
             {
-              title: "Öffunungszeiten",
-              text: "Unter dem Hero befinden sich die Öffnungszeiten.",
+              title: "Öffnungszeiten",
+              text: "Direkt im Sichtbereich platziert, damit Gäste die wichtigsten Informationen sofort finden, ohne suchen zu müssen.",
             },
           ],
           highlights: [
@@ -54,12 +54,12 @@ export const projects = [
           alt: "Features Desktop",
           description: [
             {
-              title: "Google Maps",
+              title: "Google Maps-Integration",
               text: "Unterhalb der Öffnungszeiten finden Ihre Kunden die Karte vom Restaurant. Wenn man da drauf klickt, kommt man direkt zu Google Maps und kann sogar eine Navigation starten.",
             },
             {
-              title: "Just Eat/ Uber Eats",
-              text: "Dank den Just Eat und Uber Eats Buttons, welche mit ihrer Restaurantseite verlinkt werden, können Kunden in wenigen klicks eine Bestellung aufgeben.",
+              title: "Just Eat / Uber Eats",
+              text: "Dank der direkten Schnittstellen zu Lieferdiensten können Kunden mit wenigen Klicks Bestellungen aufgeben. Das steigert den Umsatz und macht den Bestellvorgang kinderleicht.",
             },
           ],
           highlights: [
@@ -72,12 +72,8 @@ export const projects = [
           alt: "Speisekarte Desktop",
           description: [
             {
-              title: "Menüseite",
-              text: "Menüseite mit allen relevanten Informationen zu Ihren leckeren Speisen.",
-            },
-            {
-              title: "CTA Buttons",
-              text: "Die Buttons lenken Besucher direkt zum Menü und zum Kontaktformular.",
+              title: "Digitale Speisekarte",
+              text: "Eine übersichtliche Menüseite, die Ihre Speisen perfekt in Szene setzt und alle relevanten Informationen für Ihre Gäste bereithält.",
             },
           ],
           highlights: [
@@ -91,8 +87,8 @@ export const projects = [
           alt: "Content management system",
           description: [
             {
-              title: "CMS",
-              text: "Das Content management system (CMS) ist ein Schema, wo Sie ihre Inhalte selbstständig ganz einfach eintragen, verändern und löschen können. Ich kann ihnen das CMS für die Öffnungszeiten, die Speisekarte und auch andere Inhalte einrichten.",
+              title: "Einfache Inhaltsverwaltung (CMS)",
+              text: "Über ein modernes Content Management System (CMS) können Sie Ihre Inhalte, wie Öffnungszeiten oder Speisekarten, jederzeit selbstständig anpassen, ergänzen oder löschen. Sie sind dadurch völlig unabhängig und benötigen für Aktualisierungen keine Programmierkenntnisse.",
             },
           ],
         },
@@ -106,20 +102,20 @@ export const projects = [
           alt: "Startseite Mobile",
           description: [
             {
-              title: "Startseite",
-              text: "Die Startseite ist so aufgebaut, dass Ihre Kunden alle wichtigen Informationen möglichst schnell finden.",
+              title: "Mobile First Design",
+              text: "Die Startseite ist für die Einhand-Bedienung optimiert. Alle wichtigen Infos sind sofort im Sichtbereich, damit Gäste auch von unterwegs schnell fündig werden.",
             },
             {
-              title: "Hamburger Menü",
-              text: "In der Mobile Ansicht verschwindet die Navigationsleiste in einem sogenannten Hamburger Menü.",
+              title: "Intuitives Menü",
+              text: "Um Platz zu sparen, wird die Navigation kompakt in einem 'Hamburger-Menü' zusammengefasst – Standard für moderne mobile Erlebnisse.",
             },
             {
-              title: "CTA Buttons",
-              text: "Die Buttons im Hero lenken Besucher direkt zum Menü und zum Kontaktformular.",
+              title: "Daumenfreundliche CTAs",
+              text: "Die Buttons sind so platziert und dimensioniert, dass sie bequem mit dem Daumen erreichbar sind, um direkt zur Karte oder Reservierung zu springen.",
             },
             {
-              title: "Öffnungszeiten",
-              text: "Auf der Startseite kann man auch direkt die Öffnungszeiten einsehen.",
+              title: "Schnell-Info",
+              text: "Öffnungszeiten sind direkt präsent – kein langes Scrollen nötig, wenn man vor verschlossenen Türen steht.",
             },
           ],
           highlights: [
@@ -133,8 +129,8 @@ export const projects = [
           alt: "Unterer Teil der Startseite",
           description: [
             {
-              title: "Google Maps und Food Order einbindung",
-              text: "Auch in der Mobilen ansicht sind die Einbindungen für Google Maps und die Bestellservices leicht zu finden.",
+              title: "Lokale Features",
+              text: "Google Maps und Lieferdienste sind nativ integriert. Ein Klick startet direkt die Routenplanung in der Karten-App oder den Bestellvorgang bei Just Eat.",
             },
           ],
           highlights: [
@@ -147,10 +143,10 @@ export const projects = [
           alt: "Mobile Ansicht des Menüs",
           description: [
             {
-              title: "Das Menü auf dem Handy",
-              text: "Das Menü ist so optimiert, dass man auch auf dem Handy alles erkennen kann."
-            }
-          ]
+              title: "Responsive Speisekarte",
+              text: "Kein mühsames Zoomen in PDF-Dateien. Die Karte passt sich flexibel an jede Bildschirmgrösse an und bleibt perfekt lesbar.",
+            },
+          ],
         },
       ],
     },
