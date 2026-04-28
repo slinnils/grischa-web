@@ -3,6 +3,8 @@ import pizMobile from "../assets/piz-patty/piz-mobile-1.png";
 import pizMobile2 from "../assets/piz-patty/piz-mobile-2.png";
 import pizFeatures from "../assets/piz-patty/piz-desktop-2.png";
 import pizMenu from "../assets/piz-patty/piz-desktop-menu.png";
+import mobileMenu from "../assets/piz-patty/piz-mobile-menu.png"
+import cms from "../assets/piz-cms.png";
 
 import PizPattymockup from "../assets/piz-patty-mockup.webp";
 
@@ -84,6 +86,16 @@ export const projects = [
             { x: 9, y: 82, label: "Zutaten" },
           ],
         },
+        {
+          src: cms,
+          alt: "Content management system",
+          description: [
+            {
+              title: "CMS",
+              text: "Das Content management system (CMS) ist ein Schema, wo Sie ihre Inhalte selbstständig ganz einfach eintragen, verändern und löschen können. Ich kann ihnen das CMS für die Öffnungszeiten, die Speisekarte und auch andere Inhalte einrichten.",
+            },
+          ],
+        },
       ],
     },
 
@@ -129,6 +141,16 @@ export const projects = [
             { x: 35, y: 12, label: "Google Maps", right: true },
             { x: 45, y: 65, label: "link zu Bestellservices" },
           ],
+        },
+        {
+          src: mobileMenu,
+          alt: "Mobile Ansicht des Menüs",
+          description: [
+            {
+              title: "Das Menü auf dem Handy",
+              text: "Das Menü ist so optimiert, dass man auch auf dem Handy alles erkennen kann."
+            }
+          ]
         },
       ],
     },

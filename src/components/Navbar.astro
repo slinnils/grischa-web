@@ -62,7 +62,7 @@
 
   #menu-toggle {
     position: relative;
-    color: var(--color-gw-text-bright);
+    color: var(--color-gw-accent);
     font-size: 1.8rem;
     cursor: pointer;
     margin-right: 1.5rem;
@@ -109,8 +109,9 @@
       gap: 1rem;
     }
 
-    :global(header.scrolled) #nav-links a {
-      font-size: clamp(0.8rem, 2.3vw, 1.6rem);
+    :global(header.scrolled) #nav-links {
+      transform: scale(0.8);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
