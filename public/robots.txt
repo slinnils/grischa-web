@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://grischa-web.ch/sitemap-index.xml
