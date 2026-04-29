@@ -12,9 +12,11 @@
     </div>
 
     <section>
-      <h2>Email Addresse:</h2>
+      <h2>E-Mail-Addresse:</h2>
       <a class="mail" href="mailto:grischaweb@proton.me">grischaweb@proton.me</a
       >
+      <h3>Telefonnummer:</h3>
+      <a class="tel" href="tel:+41799689805">+41 79 968 98 05</a>
     </section>
   </div>
 
@@ -34,23 +36,24 @@
 
   .container {
     display: flex;
+    gap: 1rem;
     justify-content: center;
     margin-bottom: 2rem;
   }
 
-  a:not(.mail) {
+  a:not(.mail, .tel) {
     color: var(--color-gw-text-bright);
-    font-size: 1.2rem;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
     cursor: pointer;
   }
 
-  a:not(.mail):hover {
+  a:not(.mail, .tel):hover {
     color: var(--color-gw-text-mute);
   }
 
-  h2 {
+  h2, h3 {
     color: var(--color-gw-accent);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   @media (min-width: 800px) {
@@ -67,8 +70,13 @@
     margin-right: 3rem;
   }
 
-  .mail {
+  .mail, .tel {
     color: var(--color-gw-text-mute);
+    font-size: clamp(1rem, 3vw, 1.3rem);
+  }
+
+  h3{
+    margin-top: 1rem;
   }
 
   .copyright {
