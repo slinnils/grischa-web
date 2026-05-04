@@ -23,11 +23,12 @@ Innerhalb des Projekts findest du folgende Ordnerstruktur:
 /
 ├── public/          # Statische Assets (Favicon, etc.)
 ├── src/
-│   ├── assets/      # Bilder (PNG, JPG) und Vektorgrafiken (SVG)
-│   ├── components/  # Astro- & React-Komponenten (.jsx & .astro)
-│   ├── data/        # JSON oder JS-Dateien für Projektinhalte
+│   ├── assets/      # Bilder und SVGs (optimiert durch Astro)
+│   ├── components/  # Astro- & React-Komponenten (z.B. Accordion, Carousel)
+│   ├── data/        # Datenstrukturen für Projektinhalte
 │   ├── layouts/     # Basis-Templates (BaseLayout.astro)
-│   ├── pages/       # Routen und dynamische Seiten ([slug].astro)
-│   └── styles/      # Globale Styles (global.css)
-├── astro.config.mjs # Konfiguration für Astro
-└── package.json     # Projekt-Abhängigkeiten
+│   ├── pages/       # Routen und dynamische Inhalte
+│   └── styles/      # Globale Stylesheets
+├── astro.config.mjs # Framework-Konfiguration
+├── tsconfig.json    # TypeScript-Konfiguration
+└── package.json     # Projekt-Abhängigkeiten und Scripte

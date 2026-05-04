@@ -6,7 +6,7 @@ export default function Accordion({ items }) {
   return (
     <div className="flex flex-col gap-2 w-full">
       {items.description.map((item, i) => (
-        <>
+        <div className="px-5">
           <div
             key={i}
             className="border-2 border-gw-accent-muted rounded-lg overflow-hidden mt-5"
@@ -28,7 +28,7 @@ export default function Accordion({ items }) {
               </div>
             )}
           </div>
-        </>
+        </div>
       ))}
     </div>
   );

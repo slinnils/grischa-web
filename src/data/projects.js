@@ -6,7 +6,7 @@ import pizMenu from "../assets/piz-patty/piz-desktop-menu.png";
 import mobileMenu from "../assets/piz-patty/piz-mobile-menu.png";
 import cms from "../assets/piz-cms.png";
 
-import PizPattymockup from "../assets/piz-patty-mockup.webp";
+import PizPattymockup from "../assets/piz-patty-mockup.png";
 
 export const projects = [
   {
@@ -31,7 +31,7 @@ export const projects = [
             },
             {
               title: "Hero-Sektion",
-              text: "Ein emotionales, grossformatiges Titelbild, das sofort die Atmosphäre des Restaurants vermittelt und den Besucher willkommen heisst.",
+              text: "Ein emotionales, grossformatiges Titelbild oder Video, das sofort die Atmosphäre des Restaurants vermittelt und den Besucher willkommen heisst.",
             },
             {
               title: "Call-to-Action (CTA)",
@@ -41,12 +41,17 @@ export const projects = [
               title: "Öffnungszeiten",
               text: "Direkt im Sichtbereich platziert, damit Gäste die wichtigsten Informationen sofort finden, ohne suchen zu müssen.",
             },
+            {
+              title: "Google Maps-Integration",
+              text: "Unterhalb der Öffnungszeiten finden Ihre Kunden die Karte vom Restaurant. Wenn man da drauf klickt, kommt man direkt zu Google Maps und kann sogar eine Navigation starten.",
+            },
           ],
           highlights: [
             { x: 55, y: -6, label: "Navigationsleiste", right: true },
-            { x: 45, y: 41.5, label: "CTA Buttons" },
-            { x: 50, y: 10, label: "Hero Bild" },
+            { x: 45, y: 43.5, label: "CTA Buttons" },
+            { x: 50, y: 10, label: "Hero Sektion" },
             { x: 10, y: 53, label: "Öffnungszeiten" },
+            { x: 60, y: 68, label: "Google Maps" },
           ],
         },
         {
@@ -54,17 +59,17 @@ export const projects = [
           alt: "Features Desktop",
           description: [
             {
-              title: "Google Maps-Integration",
-              text: "Unterhalb der Öffnungszeiten finden Ihre Kunden die Karte vom Restaurant. Wenn man da drauf klickt, kommt man direkt zu Google Maps und kann sogar eine Navigation starten.",
-            },
-            {
               title: "Just Eat / Uber Eats",
               text: "Dank der direkten Schnittstellen zu Lieferdiensten können Kunden mit wenigen Klicks Bestellungen aufgeben. Das steigert den Umsatz und macht den Bestellvorgang kinderleicht.",
             },
+            {
+              title: "Footer",
+              text: "Der Footer enthält die wichtigsten Kontaktdaten und Links auf einen Blick. Adresse, Telefonnummer und E-Mail. So finden Besucher auch am Ende der Seite schnell den Weg zum Restaurant.",
+            },
           ],
           highlights: [
-            { x: 70, y: 28, label: "Google Maps" },
-            { x: 23, y: 60, label: "Bestellservice" },
+            { x: 23, y: 2, label: "Bestellservice" },
+            { x: 43, y: 52, label: "Footer" },
           ],
         },
         {
@@ -77,9 +82,9 @@ export const projects = [
             },
           ],
           highlights: [
-            { x: 28, y: 25, label: "Preis" },
-            { x: 3, y: 59, label: "Allergie Infos" },
-            { x: 9, y: 82, label: "Zutaten" },
+            { x: 28, y: 35, label: "Preis" },
+            { x: 3, y: 50, label: "Allergie Infos" },
+            { x: 49, y: 83, label: "Zutaten" },
           ],
         },
         {
@@ -135,7 +140,7 @@ export const projects = [
           ],
           highlights: [
             { x: 35, y: 12, label: "Google Maps", right: true },
-            { x: 45, y: 65, label: "link zu Bestellservices" },
+            { x: 45, y: 85, label: "link zu Bestellservices" },
           ],
         },
         {
