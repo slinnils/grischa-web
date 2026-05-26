@@ -30,7 +30,7 @@
     </form>
   </div>
 
-  <div class="info">
+  <div class="info card">
     <h3 class="section-title">Meine Kontaktangaben:</h3>
     <p>Nils Imbach</p>
     <a href="mailto:nils@grischa-web.ch">nils@grischa-web.ch</a>
@@ -69,8 +69,9 @@
 
   label {
     color: var(--color-gw-text);
-    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    font-size: clamp(1rem, 4vw, 1.3rem);
     align-self: flex-start;
+    text-transform: uppercase;
   }
 
   form {
@@ -85,32 +86,36 @@
     cursor: pointer;
   }
 
+
+  input,
   textarea {
+    margin-bottom: 1.6rem;
+    width: 100%;
+    max-width: 600px;
+    font-size: 1rem;
+    color: var(--color-gw-text-bright);
+    outline: none;
+  }
+
+  input{
+    border-bottom: 1px solid var(--color-gw-text-mute);
+    padding: 0.3rem 0 0.3rem 0.5rem;
+  }
+
+  input:focus{
+    border-bottom: 1px solid var(--color-gw-accent);
+  }
+
+  textarea{
+    border: 1px solid var(--color-gw-text-mute);
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    margin-top: 0.8rem;
     height: 200px;
   }
 
-  input,
-  textarea {
-    margin: 0.5rem 0 1.6rem 0;
-    padding: 0.2rem 1rem;
-    width: 100%;
-    max-width: 600px;
-    font-size: 1.5rem;
-    color: var(--color-gw-text-bright);
-    background-color: var(--color-gw-bg-card);
-    border-radius: 15px;
-    border: 1px solid var(--color-gw-accent-muted);
-  }
-
-  input:not([type="hidden"]):not([name="botcheck"]):focus,
-  textarea:focus {
-    outline: none;
-    box-shadow: 0px 0px 20px var(--color-gw-shadow);
-  }
-
-  input,
-  textarea {
-    transition: box-shadow 0.3s;
+  textarea:focus{
+    border: 1px solid var(--color-gw-accent);
   }
 
   span{
@@ -123,10 +128,11 @@
     width: 100%;
     text-align: center;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.158);
   }
 
   hr{
