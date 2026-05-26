@@ -45,6 +45,23 @@ const { title = "Grischa Web - Webdesign aus Graubünden" } = Astro.props;
     <Header />
     <slot />
     <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.3, rootMargin: "0px 0px -150px 0px" },
+      );
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 
   <style>

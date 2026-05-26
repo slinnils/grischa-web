@@ -3,17 +3,17 @@ import { projects } from "../data/projects.js";
 ---
 
 <section id="projects">
-  <h1 class="section-title">Referenzprojekt</h1>
+  <h1 class="section-title fade-in">Referenzprojekt</h1>
 
   <div class="projects-container">
     {
       projects.map((project) => (
-        <div class="project-wrapper card">
+        <div class="project-wrapper card fade-in">
           <div class="group">
             <h3 class="card-title project-title">
               <a href={`/${project.slug}`}>{project.title}</a>
             </h3>
-            <img src={project.mockup.src} />
+            <img class="fade-in" src={project.mockup.src} />
           </div>
           <div class="text">
             <p class="description">{project.description}</p>
@@ -61,6 +61,10 @@ import { projects } from "../data/projects.js";
     font-size: clamp(0.9rem, 2vw, 1.2rem);
   }
 
+
+  img{
+    transition-delay: 0.2s;
+  }
   .text{
     display: flex;
     flex-direction: column;
