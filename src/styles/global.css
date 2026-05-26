@@ -29,7 +29,6 @@ html {
 h1,
 h2,
 h3,
-label,
 .hero-span {
   font-family: "Changa One", sans-serif;
 }
@@ -46,7 +45,8 @@ label,
 
 p,
 a,
-span {
+span,
+label {
   font-family: "Nova Square", sans-serif;
 }
 
@@ -82,9 +82,6 @@ a {
 .card-title {
   font-size: clamp(1rem, 6.3vw, 1.5rem);
   color: var(--color-gw-text-bright);
-}
-
-.card-title:not(.project-title) {
 }
 
 .card-text {
